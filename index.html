@@ -1461,6 +1461,40 @@
     </div>
   </footer>
 
+  <!-- Lightbox / Fullscreen Carousel -->
+<div class="lightbox" id="lightbox" hidden aria-hidden="true">
+  <div class="lb-backdrop" data-lb-close></div>
+
+  <div class="lb-dialog" role="dialog" aria-modal="true" aria-label="Vista ampliada del producto">
+    <button class="lb-close" type="button" aria-label="Cerrar" data-lb-close>✕</button>
+
+    <div class="lb-header">
+      <div class="lb-title">
+        <span class="lb-name" id="lbName">Producto</span>
+      </div>
+
+      <div class="lb-badges" aria-hidden="true">
+        <button class="c-badge is-active" type="button" data-lb-badge="0">Frente</button>
+        <button class="c-badge" type="button" data-lb-badge="1">Espalda</button>
+      </div>
+    </div>
+
+    <div class="lb-viewport">
+      <div class="lb-track" id="lbTrack"><!-- JS inyecta imgs --></div>
+
+      <button class="lb-nav lb-prev" type="button" aria-label="Anterior">‹</button>
+      <button class="lb-nav lb-next" type="button" aria-label="Siguiente">›</button>
+    </div>
+
+    <div class="lb-footer">
+      <div class="lb-dots" id="lbDots" aria-hidden="true"></div>
+      <a class="btn btn-primary" href="https://wa.me/5491162504810" target="_blank" rel="noopener">
+        Consultar por WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
   <script src="app.js"></script>
 </body>
 </html>

@@ -317,6 +317,121 @@
     }
   });
 
+    // ===== Lightbox fullscreen para carousels =====
+  const lb = document.getElementById("lightbox");
+  const lbTrack = document.getElementById("lbTrack");
+  const lbDots = document.getElementById("lbDots");
+  const lbName = document.getElementById("lbName");
+  const lbPrev = lb ? lb.querySelector(".lb-prev") : null;
+  const lbNext = lb ? lb.querySelector(".lb-next") : null;
+  const lbBadges = lb ? Array.from(lb.querySelectorAll("[data-lb-badge]")) : [];
+
+  let lbIndex = 0;
+  let lbSlides = [];
+
+  function openLightbox(productName, imgs, startIndex=0){
+    if (!lb || !lbTrack) return;
+    lbIndex = startIndex;
+    lbSlides = imgs;
+
+    if (lbName) lbName.textContent = productName || "Producto";
+
+    lbTrack.innerHTML = imgs.map((src, i) =>
+      `<img src="${src}" alt="${productName} - ${i===0 ? "frente" : "espalda"}" loading="lazy">`
+    ).join("");
+
+    if (lbDots){
+      lbDots.innerHTML = imgs.map((_, i) =>
+        `<span class="lb-dot ${i===startIndex ? "is-active" : ""}"></span>`
+      ).join("");
+    }
+
+    lb.hidden = false;
+    lb.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    updateLightbox();
+  }
+
+  function closeLightbox(){
+    if (!lb) return;
+    lb.hidden = true;
+    lb.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  function updateLightbox(){
+    if (!lbTrack) return;
+    lbTrack.style.transform = `translateX(${-lbIndex * 100}%)`;
+
+    if (lbDots){
+      Array.from(lbDots.querySelectorAll(".lb-dot")).forEach((d,i)=>{
+        d.classList.toggle("is-active", i === lbIndex);
+      });
+    }
+    lbBadges.forEach((b,i)=> b.classList.toggle("is-active", i === lbIndex));
+  }
+
+  // Abrir al tocar el carrusel del producto (pero no si tocás flechas/badges)
+  document.addEventListener("click", (e) => {
+    const carousel = e.target.closest("[data-carousel]");
+    if (!carousel) return;
+
+    if (e.target.closest(".c-btn") || e.target.closest(".c-badge")) return;
+
+    const card = carousel.closest(".product-card");
+    const productName =
+      (card && card.getAttribute("data-name")) ||
+      carousel.getAttribute("data-name") ||
+      "Producto";
+
+    const imgs = Array.from(carousel.querySelectorAll(".c-track img"))
+      .map(img => img.getAttribute("src"))
+      .filter(Boolean);
+
+    if (!imgs.length) return;
+
+    const activeBadgeIndex = (() => {
+      const badges = Array.from(carousel.querySelectorAll(".c-badge"));
+      const idx = badges.findIndex(b => b.classList.contains("is-active"));
+      return idx >= 0 ? idx : 0;
+    })();
+
+    openLightbox(productName, imgs, activeBadgeIndex);
+  });
+
+  // Cerrar haciendo click afuera o en X
+  if (lb){
+    lb.addEventListener("click", (e) => {
+      if (e.target.matches("[data-lb-close]")) closeLightbox();
+    });
+  }
+
+  // Navegación
+  if (lbPrev) lbPrev.addEventListener("click", () => {
+    lbIndex = (lbIndex - 1 + lbSlides.length) % lbSlides.length;
+    updateLightbox();
+  });
+
+  if (lbNext) lbNext.addEventListener("click", () => {
+    lbIndex = (lbIndex + 1) % lbSlides.length;
+    updateLightbox();
+  });
+
+  lbBadges.forEach((b) => {
+    b.addEventListener("click", () => {
+      const i = Number(b.getAttribute("data-lb-badge"));
+      if (!Number.isNaN(i)) { lbIndex = i; updateLightbox(); }
+    });
+  });
+
+  // Teclado
+  document.addEventListener("keydown", (e) => {
+    if (!lb || lb.hidden) return;
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft") { lbIndex = (lbIndex - 1 + lbSlides.length) % lbSlides.length; updateLightbox(); }
+    if (e.key === "ArrowRight"){ lbIndex = (lbIndex + 1) % lbSlides.length; updateLightbox(); }
+  });
+
 
   applyCatalog();
 })();
