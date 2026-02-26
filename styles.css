@@ -890,7 +890,8 @@ a:hover{ text-decoration:underline; text-decoration-color: rgba(212,163,115,.65)
 .lb-dialog{
   position: relative;
   width: min(980px, calc(100% - 28px));
-  margin: 16px auto;
+  max-height: calc(100vh - 28px);      /* clave */
+  margin: 14px auto;
   top: 50%;
   transform: translateY(-50%);
   background: rgba(249,249,247,.96);
@@ -898,6 +899,9 @@ a:hover{ text-decoration:underline; text-decoration-color: rgba(212,163,115,.65)
   border-radius: 22px;
   box-shadow: 0 30px 90px rgba(0,0,0,.25);
   overflow: hidden;
+
+  display: flex;                       /* clave */
+  flex-direction: column;              /* clave */
 }
 
 .lb-close{
@@ -933,6 +937,10 @@ a:hover{ text-decoration:underline; text-decoration-color: rgba(212,163,115,.65)
   position: relative;
   overflow: hidden;
   background: rgba(255,255,255,.25);
+
+  flex: 1;                             /* clave: ocupa el alto disponible */
+  min-height: 0;                       /* clave: permite que no “rebalse” */
+  display: flex;
 }
 
 .lb-track{
@@ -941,15 +949,19 @@ a:hover{ text-decoration:underline; text-decoration-color: rgba(212,163,115,.65)
   grid-auto-columns: 100%;
   transition: transform .28s ease;
   will-change: transform;
+
+  width: 100%;
+  height: 100%;                        /* clave */
 }
 
 .lb-track img{
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
-  object-fit: contain;
+  height: 100%;
+  object-fit: contain;                 /* entra completa */
   background: rgba(249,249,247,.96);
-  padding: 18px; /* aire */
+  padding: 18px;
+
+  aspect-ratio: auto;                  /* clave: sacá el 4/5 */
 }
 
 /* ✅ flechas lindas (glassy) */
