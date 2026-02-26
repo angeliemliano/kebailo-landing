@@ -1,0 +1,1466 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KEBAILO — Elegancia atemporal, estilo moderno</title>
+  <meta name="description" content="Catálogo premium de mallas de danza y complementos. Venta mayorista. Consultas por WhatsApp." />
+
+  <!-- Tipografías (Serif editorial + Sans minimal) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Ir al inicio">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">KEBAILO</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#categorias">Categorías</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#talles">Talles</a>
+        <a href="#colores">Colores</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-ghost" href="#catalogo">Ver modelos</a>
+        <a class="btn btn-primary" href="https://wa.me/5491162504810" target="_blank" rel="noopener">
+          Pedir lista mayorista
+        </a>
+        <button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <div class="container mobile-menu-inner">
+        <a href="#categorias">Categorías</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#talles">Talles</a>
+        <a href="#colores">Colores</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary w-full" href="https://wa.me/5491162504810" target="_blank" rel="noopener">
+          Pedir lista mayorista
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker reveal">
+            <span class="dot" aria-hidden="true"></span>
+            Elegancia atemporal, estilo moderno
+          </p>
+
+          <h1 class="hero-title reveal">
+            Mallas de danza y complementos con estética editorial y detalles técnicos impecables.
+          </h1>
+
+          <p class="hero-subtitle reveal">
+            Catálogo completo de línea Diseño, Academia y Deporte. Venta mayorista — consultas por WhatsApp.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="https://wa.me/5491162504810" target="_blank" rel="noopener">
+              Pedir lista mayorista
+            </a>
+            <a class="btn btn-ghost" href="#catalogo">Explorar catálogo</a>
+          </div>
+
+          <div class="hero-metrics reveal">
+            <div class="metric">
+              <span class="metric-value">+20</span>
+              <span class="metric-label">modelos de mallas</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">3</span>
+              <span class="metric-label">líneas (Diseño / Academia / Deporte)</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">100%</span>
+              <span class="metric-label">responsive y liviano</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media reveal">
+          <!-- Placeholder hero (reemplazá por foto del catálogo) -->
+          <img
+            src="https://via.placeholder.com/900x1100.png?text=Hero+Photo+Placeholder"
+            width="900" height="1100"
+            alt="Placeholder de imagen principal del catálogo"
+            loading="lazy"
+          />
+          <div class="hero-badge">
+            <span class="badge-title">Catálogo 2026</span>
+            <span class="badge-sub">Studio-Chic • premium</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section id="categorias" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title reveal">Categorías</h2>
+          <p class="section-subtitle reveal">
+            Separación clara para navegar rápido: clásicas (Academia) y modernas (Diseño), más deporte y complementos.
+          </p>
+        </div>
+
+        <div class="category-grid">
+          <article class="category-card reveal" data-filter="academia">
+            <h3>Clásicas · Academia</h3>
+            <p>Silhuetas base y funcionales: ballerina, musculosa, mangas cortas y mangas largas.</p>
+            <button class="chip" type="button" data-filter-btn="academia">Ver Academia</button>
+          </article>
+
+          <article class="category-card reveal" data-filter="diseno">
+            <h3>Modernas · Diseño</h3>
+            <p>Recortes, encaje/microtul, cuellos altos y espaldas protagonistas para una estética más editorial.</p>
+            <button class="chip" type="button" data-filter-btn="diseno">Ver Diseño</button>
+          </article>
+
+          <article class="category-card reveal" data-filter="deporte">
+            <h3>Deporte</h3>
+            <p>Prendas de soporte y confort con espalda deportiva y microtul.</p>
+            <button class="chip" type="button" data-filter-btn="deporte">Ver Deporte</button>
+          </article>
+
+          <article class="category-card reveal" data-filter="complementos">
+            <h3>Complementos</h3>
+            <p>Calzas, tutús y conjunto modal para completar el look.</p>
+            <button class="chip" type="button" data-filter-btn="complementos">Ver Complementos</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section id="catalogo" class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title reveal">Catálogo de productos</h2>
+          <p class="section-subtitle reveal">
+            Modelos y detalles técnicos del catálogo. Reemplazá las imágenes de relleno por las fotos reales cuando quieras.
+          </p>
+        </div>
+
+        <div class="catalog-controls reveal">
+          <div class="tabs" role="tablist" aria-label="Filtro de catálogo">
+            <button class="tab is-active" type="button" data-filter="all" role="tab" aria-selected="true">Todos</button>
+            <button class="tab" type="button" data-filter="diseno" role="tab" aria-selected="false">Diseño</button>
+            <button class="tab" type="button" data-filter="academia" role="tab" aria-selected="false">Academia</button>
+            <button class="tab" type="button" data-filter="deporte" role="tab" aria-selected="false">Deporte</button>
+            <button class="tab" type="button" data-filter="complementos" role="tab" aria-selected="false">Complementos</button>
+          </div>
+
+          <div class="search">
+            <label class="sr-only" for="searchInput">Buscar</label>
+            <input id="searchInput" type="search" placeholder="Buscar modelo… (ej: Princesa, Calza, Tutú)" autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+          <!-- ====== LÍNEA DISEÑO (Modernas) ====== -->
+          <article class="product-card reveal" data-category="diseno" data-name="Andrea">
+            <div class="carousel" data-carousel data-name="Andrea">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Andrea+Frente" alt="Andrea - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Andrea+Espalda" alt="Andrea - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Andrea</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Lycra de seda. Forro smooth delantero. Espalda en U profunda con tirantes radiales hacia arandela central.</p>
+              <ul class="specs">
+                <li>Material: lycra de seda</li>
+                <li>Forro: smooth delantero</li>
+                <li>Espalda: U profunda + tirantes radiales</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Bayadera">
+            <div class="carousel" data-carousel data-name="Bayadera">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Bayadera+Frente" alt="Bayadera - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Bayadera+Espalda" alt="Bayadera - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Bayadera</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Lycra de seda + microtul elastizado. Falso escote corazón. Inserción de microtul en cintura.</p>
+              <ul class="specs">
+                <li>Material: lycra + microtul</li>
+                <li>Detalle: falso escote corazón</li>
+                <li>Cintura: panel microtul</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Candela">
+            <div class="carousel" data-carousel data-name="Candela">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Candela+Frente" alt="Candela - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Candela+Espalda" alt="Candela - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Candela</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Musculosa con frunce central. Espalda en U profunda con frunce vertical.</p>
+              <ul class="specs">
+                <li>Fit: musculosa</li>
+                <li>Detalle: frunce central</li>
+                <li>Espalda: U profunda + frunce</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Canela">
+            <div class="carousel" data-carousel data-name="Canela">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Canela+Frente" alt="Canela - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Canela+Espalda" alt="Canela - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Canela</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Microtul estampado. Falso escote corazón. Espalda redondeada baja con panel microtul.</p>
+              <ul class="specs">
+                <li>Material: microtul estampado</li>
+                <li>Detalle: escote corazón</li>
+                <li>Espalda: baja + transparencia</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Carolina">
+            <div class="carousel" data-carousel data-name="Carolina">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Carolina+Frente" alt="Carolina - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Carolina+Espalda" alt="Carolina - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Carolina</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Puntilla. Escote recto con puntilla floral. Espalda recta con franja de puntilla. (Talles 50/55/60)</p>
+              <ul class="specs">
+                <li>Material: lycra + puntilla</li>
+                <li>Escote: recto con puntilla</li>
+                <li>Talles: 50 / 55 / 60</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Julia">
+            <div class="carousel" data-carousel data-name="Julia">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Julia+Frente" alt="Julia - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Julia+Espalda" alt="Julia - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Julia</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Cuello alto cerrado con broche en nuca. Microtul. Espalda gota con transparencia.</p>
+              <ul class="specs">
+                <li>Cuello: alto + broche</li>
+                <li>Material: microtul</li>
+                <li>Espalda: gota translúcida</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Marcela">
+            <div class="carousel" data-carousel data-name="Marcela">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Marcela+Frente" alt="Marcela - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Marcela+Espalda" alt="Marcela - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Marcela</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Microtul estampado. Corte cintura estilizador. Espalda baja con breteles finos cruzados.</p>
+              <ul class="specs">
+                <li>Material: microtul estampado</li>
+                <li>Corte: cintura estilizador</li>
+                <li>Espalda: baja + breteles cruzados</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Mariana">
+            <div class="carousel" data-carousel data-name="Mariana">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Mariana+Frente" alt="Mariana - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Mariana+Espalda" alt="Mariana - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Mariana</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Encaje con V en busto. Espalda combinada lycra + encaje. Broche en cuello.</p>
+              <ul class="specs">
+                <li>Material: encaje + lycra</li>
+                <li>Detalle: V en busto</li>
+                <li>Cierre: broche en cuello</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Mariza">
+            <div class="carousel" data-carousel data-name="Mariza">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Mariza+Frente" alt="Mariza - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Mariza+Espalda" alt="Mariza - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Mariza</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Frunce central. Breteles finos cruzados doble X. Espalda con abertura oval.</p>
+              <ul class="specs">
+                <li>Detalle: frunce central</li>
+                <li>Breteles: doble X</li>
+                <li>Espalda: abertura oval</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Mica">
+            <div class="carousel" data-carousel data-name="Mica">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Mica+Frente" alt="Mica - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Mica+Espalda" alt="Mica - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Mica</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Mangas de microtul y pollerín ½ campana. Espalda U profunda. (Talles 50/55/60)</p>
+              <ul class="specs">
+                <li>Mangas: microtul</li>
+                <li>Pollerín: ½ campana</li>
+                <li>Talles: 50 / 55 / 60</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Natalia">
+            <div class="carousel" data-carousel data-name="Natalia">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Natalia+Frente" alt="Natalia - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Natalia+Espalda" alt="Natalia - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Natalia</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Cuello alto. Panel microtul. Espalda casi toda descubierta con tiras laterales.</p>
+              <ul class="specs">
+                <li>Cuello: alto</li>
+                <li>Panel: microtul</li>
+                <li>Espalda: súper abierta + tiras</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Olivia">
+            <div class="carousel" data-carousel data-name="Olivia">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Olivia+Frente" alt="Olivia - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Olivia+Espalda" alt="Olivia - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Olivia</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Encaje. Escote V redondeado con panel de encaje. Mangas de encaje. Espalda profunda.</p>
+              <ul class="specs">
+                <li>Material: encaje</li>
+                <li>Escote: V redondeado</li>
+                <li>Espalda: profunda</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Prince">
+            <div class="carousel" data-carousel data-name="Prince">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Prince+Frente" alt="Prince - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Prince+Espalda" alt="Prince - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Prince</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Volado al tono. Costuras verticales. Espalda con costura central. (Talles 50/55/60)</p>
+              <ul class="specs">
+                <li>Detalle: volado al tono</li>
+                <li>Costuras: verticales</li>
+                <li>Talles: 50 / 55 / 60</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Princesa">
+            <div class="carousel" data-carousel data-name="Princesa">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Princesa+Frente" alt="Princesa - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Princesa+Espalda" alt="Princesa - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Princesa</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Encaje floral central con volados. Laterales en lycra. Espalda en 2 piezas con costura central.</p>
+              <ul class="specs">
+                <li>Detalle: encaje floral + volados</li>
+                <li>Laterales: lycra</li>
+                <li>Espalda: 2 piezas + costura central</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Roxy Body">
+            <div class="carousel" data-carousel data-name="Roxy Body">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Roxy+Body+Frente" alt="Roxy Body - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Roxy+Body+Espalda" alt="Roxy Body - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Roxy (Body)</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Franja vertical de encaje al frente. Espalda de encaje semitransparente con pieza diagonal y abertura triangular lumbar.</p>
+              <ul class="specs">
+                <li>Frente: franja encaje</li>
+                <li>Espalda: encaje semitransparente</li>
+                <li>Abertura: triangular lumbar</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Rufi">
+            <div class="carousel" data-carousel data-name="Rufi">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Rufi+Frente" alt="Rufi - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Rufi+Espalda" alt="Rufi - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Rufi</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Cuello alto con canesú corazón en microtul/encaje. Gran abertura oval en espalda. Broche en nuca.</p>
+              <ul class="specs">
+                <li>Cuello: alto</li>
+                <li>Canesú: corazón microtul/encaje</li>
+                <li>Espalda: abertura oval</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Sandra">
+            <div class="carousel" data-carousel data-name="Sandra">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Sandra+Frente" alt="Sandra - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Sandra+Espalda" alt="Sandra - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Sandra</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Malla short. Mangas cortas. Espalda redondeada baja. Corte simple anatómico.</p>
+              <ul class="specs">
+                <li>Tipo: malla short</li>
+                <li>Mangas: cortas</li>
+                <li>Espalda: baja redondeada</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="diseno" data-name="Victoria">
+            <div class="carousel" data-carousel data-name="Victoria">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Victoria+Frente" alt="Victoria - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Victoria+Espalda" alt="Victoria - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Victoria</h3>
+                <span class="pill">Diseño</span>
+              </div>
+              <p class="product-desc">Panel triangular invertido en microtul/encaje. Espalda en V. Breteles anchos.</p>
+              <ul class="specs">
+                <li>Detalle: triángulo invertido</li>
+                <li>Material: microtul/encaje</li>
+                <li>Breteles: anchos</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ====== LÍNEA ACADEMIA (Clásicas) ====== -->
+          <article class="product-card reveal" data-category="academia" data-name="Ballerina">
+            <div class="carousel" data-carousel data-name="Ballerina">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Ballerina+Frente" alt="Ballerina - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Ballerina+Espalda" alt="Ballerina - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Ballerina</h3>
+                <span class="pill">Academia</span>
+              </div>
+              <p class="product-desc">Escote corazón con frunce. Espalda recta con costura central. Nota: colores claros forrados.</p>
+              <ul class="specs">
+                <li>Escote: corazón + frunce</li>
+                <li>Espalda: recta + costura central</li>
+                <li>Nota: colores claros forrados</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="academia" data-name="Mangas Cortas">
+            <div class="carousel" data-carousel data-name="Mangas Cortas">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Mangas+Cortas+Frente" alt="Mangas Cortas - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Mangas+Cortas+Espalda" alt="Mangas Cortas - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Mangas Cortas</h3>
+                <span class="pill">Academia</span>
+              </div>
+              <p class="product-desc">Escote redondo clásico. Espalda baja. Nota: colores claros forrados.</p>
+              <ul class="specs">
+                <li>Escote: redondo</li>
+                <li>Espalda: baja</li>
+                <li>Nota: colores claros forrados</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="academia" data-name="Mangas Largas">
+            <div class="carousel" data-carousel data-name="Mangas Largas">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Mangas+Largas+Frente" alt="Mangas Largas - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Mangas+Largas+Espalda" alt="Mangas Largas - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Mangas Largas</h3>
+                <span class="pill">Academia</span>
+              </div>
+              <p class="product-desc">Clásico con mayor cobertura. Nota: colores claros forrados.</p>
+              <ul class="specs">
+                <li>Fit: clásico</li>
+                <li>Cobertura: mangas largas</li>
+                <li>Nota: colores claros forrados</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="academia" data-name="Musculosa">
+            <div class="carousel" data-carousel data-name="Musculosa">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Musculosa+Frente" alt="Musculosa - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Musculosa+Espalda" alt="Musculosa - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Musculosa</h3>
+                <span class="pill">Academia</span>
+              </div>
+              <p class="product-desc">Breteles anchos. Espalda baja. Nota: colores claros forrados.</p>
+              <ul class="specs">
+                <li>Breteles: anchos</li>
+                <li>Espalda: baja</li>
+                <li>Nota: colores claros forrados</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ====== LÍNEA DEPORTE ====== -->
+          <article class="product-card reveal" data-category="deporte" data-name="Recerback">
+            <div class="carousel" data-carousel data-name="Recerback">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Recerback+Frente" alt="Recerback - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Recerback+Espalda" alt="Recerback - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Recerback</h3>
+                <span class="pill">Deporte</span>
+              </div>
+              <p class="product-desc">Top crop de espalda deportiva. Microtul en espalda y banda de soporte debajo del busto.</p>
+              <ul class="specs">
+                <li>Tipo: top crop</li>
+                <li>Espalda: deportiva + microtul</li>
+                <li>Soporte: banda bajo busto</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ====== COMPLEMENTOS ====== -->
+          <article class="product-card reveal" data-category="complementos" data-name="Saquito Manga Larga">
+            <div class="carousel" data-carousel data-name="Saquito Manga Larga">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Saquito+Manga+Larga+Frente" alt="Saquito Manga Larga - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Saquito+Manga+Larga+Espalda" alt="Saquito Manga Larga - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Saquito manga larga</h3>
+                <span class="pill">Complementos</span>
+              </div>
+              <p class="product-desc">Conjunto en modal: saquito manga larga (ideal pre y post clase). (Detalles según catálogo)</p>
+              <ul class="specs">
+                <li>Material: modal</li>
+                <li>Uso: abrigo liviano</li>
+                <li>Combo: con pantalón</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="complementos" data-name="Pantalón Modal">
+            <div class="carousel" data-carousel data-name="Pantalón Modal">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Pantalón+Modal+Frente" alt="Pantalón Modal - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Pantalón+Modal+Espalda" alt="Pantalón Modal - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Pantalón modal</h3>
+                <span class="pill">Complementos</span>
+              </div>
+              <p class="product-desc">Pantalón en modal (conjunto con saquito). Comodidad para calentamiento y traslados.</p>
+              <ul class="specs">
+                <li>Material: modal</li>
+                <li>Fit: comfy</li>
+                <li>Combo: con saquito</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="complementos" data-name="Tutú">
+            <div class="carousel" data-carousel data-name="Tutú">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Tutú+Frente" alt="Tutú - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Tutú+Espalda" alt="Tutú - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Tutú</h3>
+                <span class="pill">Complementos</span>
+              </div>
+              <p class="product-desc">Tutús para niñas y adultos. (Especificaciones técnicas según catálogo.)</p>
+              <ul class="specs">
+                <li>Incluye: versión niñas y adultos</li>
+                <li>Uso: escenario / academia</li>
+                <li>Personalización: consultar</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="complementos" data-name="Calza Tiro Alto">
+            <div class="carousel" data-carousel data-name="Calza Tiro Alto">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Calza+Tiro+Alto+Frente" alt="Calza Tiro Alto - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Calza+Tiro+Alto+Espalda" alt="Calza Tiro Alto - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Calza tiro alto</h3>
+                <span class="pill">Complementos</span>
+              </div>
+              <p class="product-desc">Calza tiro alto (con o sin pie) para entreno y abrigo.</p>
+              <ul class="specs">
+                <li>Opción: con pie / sin pie</li>
+                <li>Tiro: alto</li>
+                <li>Uso: entrenamiento</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="complementos" data-name="Calza Con Pie">
+            <div class="carousel" data-carousel data-name="Calza Con Pie">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Calza+Con+Pie+Frente" alt="Calza Con Pie - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Calza+Con+Pie+Espalda" alt="Calza Con Pie - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Calza con pie</h3>
+                <span class="pill">Complementos</span>
+              </div>
+              <p class="product-desc">Calza con pie para continuidad de línea y abrigo en barra.</p>
+              <ul class="specs">
+                <li>Tipo: con pie</li>
+                <li>Uso: barra / ensayos</li>
+                <li>Estética: línea continua</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="product-card reveal" data-category="complementos" data-name="Calza Sin Pie">
+            <div class="carousel" data-carousel data-name="Calza Sin Pie">
+              <div class="c-badges" aria-hidden="true">
+                <button class="c-badge is-active" type="button">Frente</button>
+                <button class="c-badge" type="button">Espalda</button>
+              </div>
+
+              <button class="c-btn c-prev" type="button" aria-label="Foto anterior">‹</button>
+
+              <div class="c-viewport">
+                <div class="c-track">
+                  <img src="https://via.placeholder.com/800x1000.png?text=Calza+Sin+Pie+Frente" alt="Calza Sin Pie - frente (placeholder)" loading="lazy" />
+                  <img src="https://via.placeholder.com/800x1000.png?text=Calza+Sin+Pie+Espalda" alt="Calza Sin Pie - espalda (placeholder)" loading="lazy" />
+                </div>
+              </div>
+
+              <button class="c-btn c-next" type="button" aria-label="Foto siguiente">›</button>
+
+              <div class="c-dots" aria-hidden="true">
+                <span class="c-dot is-active"></span>
+                <span class="c-dot"></span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-top">
+                <h3>Calza sin pie</h3>
+                <span class="pill">Complementos</span>
+              </div>
+              <p class="product-desc">Calza sin pie para versatilidad y uso con medias/soquetes.</p>
+              <ul class="specs">
+                <li>Tipo: sin pie</li>
+                <li>Uso: versátil</li>
+                <li>Combinación: medias / soquetes</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="catalog-note reveal">
+          <p>
+            <strong>Nota:</strong> Las imágenes del catálogo fueron generadas con asistencia de IA y pueden existir variaciones de colores/texturas/detalles.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TALLES -->
+    <section id="talles" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title reveal">Talles y guía de medición</h2>
+          <p class="section-subtitle reveal">
+            Medí el tiro (hombro → entrepierna → hombro). La tabla puede cargarse tal cual la del catálogo.
+          </p>
+        </div>
+
+        <div class="size-grid">
+          <div class="size-card reveal">
+            <h3>Cómo medir el tiro</h3>
+            <ol class="steps">
+              <li>Parate derecha/o con una cinta métrica flexible.</li>
+              <li>Iniciá en el hombro, bajá por el frente hasta la entrepierna.</li>
+              <li>Subí por la espalda y volvé al mismo hombro.</li>
+              <li>Anotá el total y cruzalo con el talle recomendado.</li>
+            </ol>
+            <div class="tip">
+              Tip útil: si estás entre dos talles, para danza suele convenir el que quede “snug” sin tirar de costuras.
+            </div>
+          </div>
+
+          <div class="size-card reveal">
+            <h3>Tabla de talles (placeholder)</h3>
+            <p class="muted">
+              Reemplazá esta tabla por la del PDF (altura / tiro / talle). La dejo lista para copiar-pegar.
+            </p>
+            <div class="table-wrap" role="region" aria-label="Tabla de talles" tabindex="0">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Altura</th>
+                    <th>Tiro</th>
+                    <th>Talle sugerido</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>—</td><td>—</td><td>—</td></tr>
+                  <tr><td>—</td><td>—</td><td>—</td></tr>
+                  <tr><td>—</td><td>—</td><td>—</td></tr>
+                  <tr><td>—</td><td>—</td><td>—</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="muted small">
+              * Si querés, en el próximo paso te cargo la tabla exacta del PDF y queda “cerrado”.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLORES -->
+    <section id="colores" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title reveal">Carta de colores</h2>
+          <p class="section-subtitle reveal">
+            Tricot con elastano. Estos swatches usan <strong>códigos HEX (HTML)</strong>. Si querés clavar el color exacto, ajustá los hex en <code>app.js</code>.
+          </p>
+        </div>
+
+        <div class="colors-wrap">
+          <div class="colors-toolbar reveal">
+            <div class="colors-search">
+              <label class="sr-only" for="colorSearch">Buscar color</label>
+              <input id="colorSearch" type="search" placeholder="Buscar por nombre o código… (ej: 14, violeta, aqua)" autocomplete="off" />
+            </div>
+
+            <div class="colors-actions">
+              <button class="chip" type="button" data-colors-reset>Ver todos</button>
+              <a class="btn btn-primary" href="https://wa.me/5491162504810" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="colors-grid reveal" id="colorsGrid" aria-label="Catálogo de colores">
+            <!-- Se renderiza desde app.js -->
+          </div>
+
+          <p class="muted small reveal" style="margin-top:12px;">
+            * Nota: los colores pueden variar por pantalla/iluminación. Para producción, confirmación final por código/nombre.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title reveal">Preguntas frecuentes</h2>
+          <p class="section-subtitle reveal">
+            Lo esencial: talles, colores y cómo trabajamos el catálogo.
+          </p>
+        </div>
+
+        <div class="faq reveal" data-accordion>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              ¿Venden al público o solo mayorista?
+              <span class="chev" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>La landing está pensada para <strong>venta mayorista</strong>. Pedí la lista por WhatsApp y te respondemos con condiciones y precios.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              ¿Cómo elijo mi talle?
+              <span class="chev" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>Usá la <strong>medida de tiro</strong> (hombro → entrepierna → hombro) y cruzala con la tabla. Si estás entre talles, avisá tu altura y tiro y te sugerimos el mejor calce.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              ¿Los colores son exactos a lo que se ve?
+              <span class="chev" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>Los colores son <strong>referenciales</strong> y pueden variar por pantalla/iluminación. Si necesitás un tono específico, pedinos confirmación y alternativas.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              ¿Por qué algunas imágenes pueden variar?
+              <span class="chev" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a" hidden>
+              <p>El catálogo incluye imágenes realizadas con asistencia de IA, por eso puede haber pequeñas variaciones en <strong>colores, texturas o detalles</strong>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="center-actions reveal">
+          <a class="btn btn-primary" href="https://wa.me/5491162504810" target="_blank" rel="noopener">
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-row">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <strong>KEBAILO</strong>
+        </div>
+        <p class="muted">
+          Catálogo premium de indumentaria para danza. Venta mayorista.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="https://wa.me/5491162504810" target="_blank" rel="noopener">WhatsApp: +54 9 11 6250-4810</a></li>
+          <li><a href="#" aria-disabled="true">Email (placeholder)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Redes</h4>
+        <ul>
+          <li><a href="#" aria-disabled="true">Instagram (placeholder)</a></li>
+          <li><a href="#" aria-disabled="true">TikTok (placeholder)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#talles">Talles</a></li>
+          <li><a href="#colores">Colores</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span class="muted small">© <span id="year"></span> Kebailo. Todos los derechos reservados.</span>
+      <a class="backtop" href="#top">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
