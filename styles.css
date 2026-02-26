@@ -198,12 +198,14 @@ a:hover{ text-decoration:underline; text-decoration-color: rgba(212,163,115,.65)
 .hero{
   padding:54px 0 40px;
 }
+
 .hero-grid{
-  display:grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap:34px;
-  align-items:center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
 }
+
 .kicker{
   display:inline-flex;
   align-items:center;
