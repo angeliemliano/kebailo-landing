@@ -199,6 +199,12 @@ a:hover{ text-decoration:underline; text-decoration-color: rgba(212,163,115,.65)
   gap:34px;
   align-items:center;
 }
+
+.hero-copy,
+.hero-media{
+  min-width: 0;
+}
+
 .kicker{
   display:inline-flex;
   align-items:center;
