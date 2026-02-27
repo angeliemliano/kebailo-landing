@@ -926,7 +926,7 @@ a:hover{ text-decoration:underline; text-decoration-color: rgba(212,163,115,.65)
 @media (max-width: 600px){
   .back-to-top{
     right: 12px;
-    bottom: 12px;
+    bottom: calc(86px + env(safe-area-inset-bottom, 0px));
     width: 42px;
     height: 42px;
   }
