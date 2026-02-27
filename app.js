@@ -252,22 +252,78 @@
     });
 
     // swipe en mobile
-    let startX = 0;
-    let isDown = false;
+// Swipe en mobile (robusto: cancela si el gesto es vertical)
+const viewport = root.querySelector(".c-viewport");
+if (!viewport) return;
 
-    root.addEventListener("pointerdown", (e) => {
-      isDown = true;
-      startX = e.clientX;
-    });
+let startX = 0;
+let startY = 0;
+let active = false;
+let swiping = false;
 
-    root.addEventListener("pointerup", (e) => {
-      if (!isDown) return;
-      isDown = false;
-      const dx = e.clientX - startX;
-      if (Math.abs(dx) < 35) return;
-      index = dx < 0 ? (index + 1) % slides.length : (index - 1 + slides.length) % slides.length;
-      update();
-    });
+const THRESHOLD = 45; // px: distancia mínima para cambiar de foto
+const INTENT = 10;    // px: para decidir si es gesto horizontal
+
+function goNext(){
+  index = (index + 1) % slides.length;
+  update();
+}
+function goPrev(){
+  index = (index - 1 + slides.length) % slides.length;
+  update();
+}
+
+function onPointerDown(e){
+  // solo dedo / touch
+  if (e.pointerType && e.pointerType !== "touch") return;
+
+  active = true;
+  swiping = false;
+  startX = e.clientX;
+  startY = e.clientY;
+
+  // ayuda a que el move llegue consistente
+  try { viewport.setPointerCapture(e.pointerId); } catch(_) {}
+}
+
+function onPointerMove(e){
+  if (!active) return;
+
+  const dx = e.clientX - startX;
+  const dy = e.clientY - startY;
+
+  // decidimos intención
+  if (!swiping) {
+    if (Math.abs(dx) < INTENT) return;
+    if (Math.abs(dy) > Math.abs(dx)) {
+      // era scroll vertical: cancelamos el swipe
+      active = false;
+      return;
+    }
+    swiping = true;
+  }
+
+  // Si estamos swipeando horizontal, evitamos que el browser lo interprete como scroll/gesto
+  e.preventDefault();
+}
+
+function onPointerUp(e){
+  if (!active) return;
+
+  const dx = e.clientX - startX;
+  active = false;
+
+  if (!swiping) return;
+  if (Math.abs(dx) < THRESHOLD) return;
+
+  if (dx < 0) goNext();
+  else goPrev();
+}
+
+viewport.addEventListener("pointerdown", onPointerDown);
+viewport.addEventListener("pointermove", onPointerMove, { passive: false });
+viewport.addEventListener("pointerup", onPointerUp);
+viewport.addEventListener("pointercancel", () => { active = false; });
 
     update();
   });

@@ -932,4 +932,15 @@ a:hover{ text-decoration:underline; text-decoration-color: rgba(212,163,115,.65)
   }
 }
 
+/* Swipe: permitimos scroll vertical, pero el gesto horizontal lo maneja el carrusel */
+.carousel .c-viewport{
+  touch-action: pan-y;
+}
+
+/* Opcional: evita selecciones raras durante swipe */
+.carousel{
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 
