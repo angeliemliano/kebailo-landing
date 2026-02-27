@@ -416,6 +416,13 @@ a:hover{ text-decoration:underline; text-decoration-color: rgba(212,163,115,.65)
   font-size:22px;
   line-height:1.1;
 }
+
+.catalog-more{
+  display:flex;
+  justify-content:center;
+  margin-top:18px;
+}
+
 .pill{
   display:inline-flex;
   align-items:center;

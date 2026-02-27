@@ -82,10 +82,16 @@
     });
   }
 
-  // Catalog filter + search
+// Catalog filter + search + "Ver más"
   const tabs = Array.from(document.querySelectorAll(".tab[data-filter]"));
   const cards = Array.from(document.querySelectorAll(".product-card"));
   const searchInput = document.getElementById("searchInput");
+
+  const catalogMoreWrap = document.getElementById("catalogMoreWrap");
+  const catalogMoreBtn = document.getElementById("catalogMoreBtn");
+
+  const CATALOG_LIMIT = 6; // 2 filas de 3 (en desktop)
+  let showAllCatalog = false;
 
   let currentFilter = "all";
   let currentQuery = "";
@@ -98,8 +104,27 @@
       .trim();
   }
 
+  function updateMoreButton(totalMatches) {
+    if (!catalogMoreWrap || !catalogMoreBtn) return;
+
+    if (totalMatches <= CATALOG_LIMIT) {
+      catalogMoreWrap.style.display = "none";
+      showAllCatalog = false;
+      catalogMoreBtn.setAttribute("aria-expanded", "false");
+      return;
+    }
+
+    catalogMoreWrap.style.display = "";
+    catalogMoreBtn.textContent = showAllCatalog
+      ? "Ver menos"
+      : `Ver más (${totalMatches - CATALOG_LIMIT})`;
+    catalogMoreBtn.setAttribute("aria-expanded", String(showAllCatalog));
+  }
+
   function applyCatalog() {
     const q = normalize(currentQuery);
+
+    const matches = [];
 
     cards.forEach((card) => {
       const cat = card.getAttribute("data-category") || "";
@@ -109,8 +134,20 @@
       const matchesFilter = currentFilter === "all" ? true : cat === currentFilter;
       const matchesQuery = q ? text.includes(q) : true;
 
-      card.style.display = matchesFilter && matchesQuery ? "" : "none";
+      if (matchesFilter && matchesQuery) {
+        matches.push(card);
+      } else {
+        card.style.display = "none";
+      }
     });
+
+    const limit = showAllCatalog ? matches.length : CATALOG_LIMIT;
+
+    matches.forEach((card, i) => {
+      card.style.display = i < limit ? "" : "none";
+    });
+
+    updateMoreButton(matches.length);
   }
 
   tabs.forEach((tab) => {
@@ -119,30 +156,39 @@
         t.classList.remove("is-active");
         t.setAttribute("aria-selected", "false");
       });
+
       tab.classList.add("is-active");
       tab.setAttribute("aria-selected", "true");
-      currentFilter = tab.getAttribute("data-filter") || "all";
-      applyCatalog();
-    });
-  });
 
-  // Category shortcut buttons
-  document.querySelectorAll("[data-filter-btn]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const filter = btn.getAttribute("data-filter-btn");
-      const targetTab = document.querySelector(`.tab[data-filter="${filter}"]`);
-      if (targetTab) targetTab.click();
-      const catalog = document.getElementById("catalogo");
-      if (catalog) catalog.scrollIntoView({ behavior: "smooth", block: "start" });
+      currentFilter = tab.getAttribute("data-filter") || "all";
+      showAllCatalog = false; // cuando cambiás filtro, volvemos a 6
+      applyCatalog();
     });
   });
 
   if (searchInput) {
     searchInput.addEventListener("input", (e) => {
       currentQuery = e.target.value;
+      showAllCatalog = false; // cuando buscás, arrancás compacto
       applyCatalog();
     });
   }
+
+  if (catalogMoreBtn) {
+    catalogMoreBtn.addEventListener("click", () => {
+      showAllCatalog = !showAllCatalog;
+      applyCatalog();
+
+      // Si colapsa ("Ver menos"), te dejo el scroll arriba del catálogo
+      if (!showAllCatalog) {
+        const catalog = document.getElementById("catalogo");
+        if (catalog) catalog.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  }
+
+  // Inicial
+  applyCatalog();
 
   // Product carousels (2 fotos por card + badges Frente/Espalda)
   document.querySelectorAll("[data-carousel]").forEach((root) => {
