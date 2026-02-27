@@ -387,4 +387,34 @@
 
 
   applyCatalog();
-})();
+
+  // Back to top (botón flotante)
+// Back to top (botón flotante)
+const backToTopBtn = document.getElementById("backToTop");
+
+function updateBackToTop() {
+  if (!backToTopBtn) return;
+
+  // Mobile friendly: aparece antes
+  const threshold = 180; // antes era 500
+  if (window.scrollY > threshold) {
+    backToTopBtn.classList.add("is-visible");
+  } else {
+    backToTopBtn.classList.remove("is-visible");
+  }
+}
+
+if (backToTopBtn) {
+  window.addEventListener("scroll", updateBackToTop, { passive: true });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Estado inicial
+  updateBackToTop();
+} else {
+  // Si esto pasa, el botón NO está en el HTML o el JS corre antes del DOM
+  console.warn("No se encontró #backToTop en el DOM");
+}
+  })();
