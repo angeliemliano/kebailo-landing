@@ -417,4 +417,6 @@ if (backToTopBtn) {
   // Si esto pasa, el botón NO está en el HTML o el JS corre antes del DOM
   console.warn("No se encontró #backToTop en el DOM");
 }
+
+
   })();
