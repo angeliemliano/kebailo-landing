@@ -255,10 +255,7 @@
         <div class="color-meta">
           <div class="color-top">
             <h3 class="color-name">${esc(c.name)}</h3>
-            <span class="color-code">${esc(c.code)}</span>
           </div>
-          <div class="color-hex">${esc(c.hex)}</div>
-          <button class="copy-hex" type="button" data-copy="${esc(c.hex)}">Copiar HEX</button>
         </div>
       </article>
     `).join("");
