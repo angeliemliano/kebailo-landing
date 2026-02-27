@@ -82,7 +82,8 @@
     });
   }
 
-// Catalog filter + search + "Ver más"
+
+// Catalog filter + search + "Ver más" por bloques
   const tabs = Array.from(document.querySelectorAll(".tab[data-filter]"));
   const cards = Array.from(document.querySelectorAll(".product-card"));
   const searchInput = document.getElementById("searchInput");
@@ -90,8 +91,8 @@
   const catalogMoreWrap = document.getElementById("catalogMoreWrap");
   const catalogMoreBtn = document.getElementById("catalogMoreBtn");
 
-  const CATALOG_LIMIT = 6; // 2 filas de 3 (en desktop)
-  let showAllCatalog = false;
+  const PAGE_SIZE = 6;        // cada click suma 6
+  let visibleCount = PAGE_SIZE;
 
   let currentFilter = "all";
   let currentQuery = "";
@@ -107,18 +108,25 @@
   function updateMoreButton(totalMatches) {
     if (!catalogMoreWrap || !catalogMoreBtn) return;
 
-    if (totalMatches <= CATALOG_LIMIT) {
+    // Si no hay más que mostrar, escondemos el wrap
+    if (totalMatches <= PAGE_SIZE) {
       catalogMoreWrap.style.display = "none";
-      showAllCatalog = false;
-      catalogMoreBtn.setAttribute("aria-expanded", "false");
       return;
     }
 
+    const remaining = Math.max(0, totalMatches - visibleCount);
+
     catalogMoreWrap.style.display = "";
-    catalogMoreBtn.textContent = showAllCatalog
-      ? "Ver menos"
-      : `Ver más (${totalMatches - CATALOG_LIMIT})`;
-    catalogMoreBtn.setAttribute("aria-expanded", String(showAllCatalog));
+
+    if (remaining > 0) {
+      catalogMoreBtn.textContent = `Ver más (${Math.min(PAGE_SIZE, remaining)})`;
+      catalogMoreBtn.setAttribute("aria-expanded", "false");
+      catalogMoreBtn.dataset.mode = "more";
+    } else {
+      catalogMoreBtn.textContent = "Ver menos";
+      catalogMoreBtn.setAttribute("aria-expanded", "true");
+      catalogMoreBtn.dataset.mode = "less";
+    }
   }
 
   function applyCatalog() {
@@ -126,6 +134,7 @@
 
     const matches = [];
 
+    // 1) Determinar matches por filtro + búsqueda
     cards.forEach((card) => {
       const cat = card.getAttribute("data-category") || "";
       const name = card.getAttribute("data-name") || "";
@@ -141,13 +150,19 @@
       }
     });
 
-    const limit = showAllCatalog ? matches.length : CATALOG_LIMIT;
+    // 2) Ajustar visibleCount para no pasarse
+    visibleCount = Math.min(visibleCount, matches.length);
 
+    // 3) Mostrar solo hasta visibleCount
     matches.forEach((card, i) => {
-      card.style.display = i < limit ? "" : "none";
+      card.style.display = i < visibleCount ? "" : "none";
     });
 
     updateMoreButton(matches.length);
+  }
+
+  function resetPagination() {
+    visibleCount = PAGE_SIZE;
   }
 
   tabs.forEach((tab) => {
@@ -161,7 +176,7 @@
       tab.setAttribute("aria-selected", "true");
 
       currentFilter = tab.getAttribute("data-filter") || "all";
-      showAllCatalog = false; // cuando cambiás filtro, volvemos a 6
+      resetPagination();
       applyCatalog();
     });
   });
@@ -169,25 +184,32 @@
   if (searchInput) {
     searchInput.addEventListener("input", (e) => {
       currentQuery = e.target.value;
-      showAllCatalog = false; // cuando buscás, arrancás compacto
+      resetPagination();
       applyCatalog();
     });
   }
 
   if (catalogMoreBtn) {
     catalogMoreBtn.addEventListener("click", () => {
-      showAllCatalog = !showAllCatalog;
+      const mode = catalogMoreBtn.dataset.mode || "more";
+
+      if (mode === "more") {
+        visibleCount += PAGE_SIZE; // suma 6
+        applyCatalog();
+        return;
+      }
+
+      // mode === "less": vuelve al primer bloque
+      resetPagination();
       applyCatalog();
 
-      // Si colapsa ("Ver menos"), te dejo el scroll arriba del catálogo
-      if (!showAllCatalog) {
-        const catalog = document.getElementById("catalogo");
-        if (catalog) catalog.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+      const catalog = document.getElementById("catalogo");
+      if (catalog) catalog.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   }
 
   // Inicial
+  resetPagination();
   applyCatalog();
 
   // Product carousels (2 fotos por card + badges Frente/Espalda)
