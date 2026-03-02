@@ -477,7 +477,7 @@ a:hover{ text-decoration:underline; text-decoration-color: rgba(212,163,115,.65)
   font-size:24px;
 }
 .steps{ margin:0; padding-left:18px; color:var(--muted); }
-.steps li{ margin:8px 0; }
+.steps li{ margin:0 0 5px 15px; }
 
 .tip{
   margin-top:12px;
