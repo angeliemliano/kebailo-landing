@@ -77,7 +77,7 @@ h2  {
 .brand-mark{
   width:14px;height:14px;
   border-radius:999px;
-  background: radial-gradient(circle at 30% 30%, var(--accent), var(--accent2));
+  background: #840f0a;
   box-shadow: 0 10px 22px rgba(212,163,115,.35);
 }
 .brand-name{
@@ -98,7 +98,7 @@ h2  {
   border-radius:10px;
 }
 .nav a:hover{
-  background: rgba(212,163,115,.10);
+  background: rgba(132, 15, 10,.10);
   text-decoration:none;
 }
 
@@ -127,19 +127,22 @@ h2  {
 .btn:active{ transform: translateY(0); }
 
 .btn-primary{
-  background: linear-gradient(135deg, rgba(212,163,115,.95), rgba(201,139,111,.92));
-  border-color: rgba(212,163,115,.35);
-  color: #1F1F1F;
-  box-shadow: 0 14px 30px rgba(212,163,115,.28);
-}
-.btn-primary:hover{
-  border-color: rgba(201,139,111,.55);
-  background: linear-gradient(135deg, rgba(212,163,115,1), rgba(201,139,111,1));
+  background: linear-gradient(135deg, rgba(132,15,10,.95), rgba(112,10,8,.92));
+  border-color: rgba(132,15,10,.40);
+  color: #FFFFFF;
+  box-shadow: 0 14px 30px rgba(132,15,10,.28);
 }
 
-.btn-ghost{
-  background: rgba(255,255,255,.65);
+.btn-primary:hover{
+  border-color: rgba(112,10,8,.60);
+  background: linear-gradient(135deg, rgba(132,15,10,1), rgba(112,10,8,1));
 }
+
+/* Ghost acompaña el nuevo primary sin cambiar la estética clara */
+.btn-ghost{
+  background: rgba(255,255,255,.72);
+}
+
 .w-full{ width:100%; }
 
 /* Burger */
@@ -163,7 +166,7 @@ h2  {
 /* Mobile menu */
 .mobile-menu{
   border-top:1px solid var(--line);
-  background: rgba(249,249,247,.92);
+  background: rgba(132,15,1,.92);
 }
 .mobile-menu-inner{
   display:grid;
@@ -362,7 +365,7 @@ h2  {
   color:var(--muted);
 }
 .tab.is-active{
-  background: linear-gradient(135deg, rgba(212,163,115,.22), rgba(201,139,111,.18));
+  background: linear-gradient(135deg, rgba(132,15,10,.22), rgba(112,10,8,.18));
   color: var(--text);
 }
 
@@ -435,8 +438,8 @@ h2  {
   border-radius:999px;
   font-size:12px;
   font-weight:800;
-  background: rgba(212,163,115,.16);
-  border:1px solid rgba(212,163,115,.22);
+  background: rgba(132,15,10,.20);
+  border-color: rgba(132,15,10,.25);
   white-space:nowrap;
 }
 
@@ -484,7 +487,7 @@ h2  {
   padding: 0 8px;
 
   border-radius: 6px; /* cuadradito lindo */
-  border: 1px solid rgba(212,163,115,.28);
+  border: 1px solid rgba(132,15,10,.28);
   background: rgba(255,255,255,.65);
 
   font-size: 12px;
@@ -598,10 +601,11 @@ h2  {
 .faq-item.is-open .chev{ transform: rotate(-135deg); }
 
 .faq-a{
-  padding: 0 16px 16px;
+  padding: 2px 16px 16px;
   color: var(--muted);
+  font-size: 14px;
 }
-.faq-a p{ margin: 0; }
+.faq-a p{ margin: 0;}
 
 .center-actions{
   margin-top:18px;
@@ -791,8 +795,8 @@ h2  {
 
 .c-badge.is-active{
   color: rgba(47,47,47,.92);
-  background: rgba(212,163,115,.20);
-  border-color: rgba(212,163,115,.25);
+  background: rgba(132,15,10,.20);
+  border-color: rgba(132,15,10,.25);
 }
 
 .c-badge:focus-visible{
