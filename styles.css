@@ -39,7 +39,16 @@ a:hover{ text-decoration:underline; text-decoration-color: rgba(212,163,115,.65)
 }
 
 h2  {
+  font-size: 30px !important;
   font-family:var(--serif);
+}
+
+li {
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px !important;
 }
 
 .sr-only{
@@ -75,7 +84,7 @@ h2  {
   white-space:nowrap;
 }
 .brand-mark{
-  width:14px;height:14px;
+  width:20px;height:20px;
   border-radius:999px;
   background: #840f0a;
   box-shadow: 0 10px 22px rgba(212,163,115,.35);
@@ -83,7 +92,7 @@ h2  {
 .brand-name{
   font-family:var(--serif);
   letter-spacing:.6px;
-  font-size:20px;
+  font-size:40px;
 }
 
 .nav{
@@ -228,14 +237,13 @@ h2  {
 }
 .hero-title{
   font-family:var(--serif);
-  font-size:56px;
+  font-size:35px;
   line-height:1.0;
   margin:0 0 14px;
 }
 .hero-subtitle{
   margin:0 0 18px;
   color:var(--muted);
-  font-size:16px;
   max-width:60ch;
 }
 .hero-actions{
@@ -520,8 +528,8 @@ h2  {
   margin-top:18px;
   padding:14px 16px;
   border-radius: var(--radius);
-  border:1px dashed rgba(212,163,115,.45);
-  background: rgba(212,163,115,.08);
+  border: 1px dashed rgba(132,15,10,.45);
+  background: rgba(132,15,10,.08);
   color: rgba(47,47,47,.88);
 }
 
