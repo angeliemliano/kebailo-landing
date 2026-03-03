@@ -84,7 +84,7 @@ p {
   white-space:nowrap;
 }
 .brand-mark{
-  width:20px;height:20px;
+  width:10px;height:10px;
   border-radius:999px;
   background: #840f0a;
   box-shadow: 0 10px 22px rgba(212,163,115,.35);
@@ -92,7 +92,7 @@ p {
 .brand-name{
   font-family:var(--serif);
   letter-spacing:.6px;
-  font-size:40px;
+  font-size:30px;
 }
 
 .nav{
@@ -175,7 +175,7 @@ p {
 /* Mobile menu */
 .mobile-menu{
   border-top:1px solid var(--line);
-  background: rgba(132,15,1,.92);
+  background: #fff;
 }
 .mobile-menu-inner{
   display:grid;
