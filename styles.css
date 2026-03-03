@@ -353,7 +353,14 @@ h2  {
   border:1px solid var(--line);
   border-radius:999px;
   background: rgba(255,255,255,.60);
+
+  /* ✅ FIX mobile */
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
 }
+.tabs::-webkit-scrollbar{ display:none; } /* Chrome/Safari */
 .tab{
   border:none;
   background:transparent;
@@ -363,10 +370,24 @@ h2  {
   font-weight:700;
   font-size:13px;
   color:var(--muted);
+  white-space: nowrap;
+  flex: 0 0 auto;-
 }
 .tab.is-active{
   background: linear-gradient(135deg, rgba(132,15,10,.22), rgba(112,10,8,.18));
   color: var(--text);
+}
+
+@media (max-width: 600px){
+  .catalog-controls{
+    align-items: stretch;
+  }
+  .search{
+    width: 100%;
+  }
+  .search input{
+    width: 100%;
+  }
 }
 
 .search input{
