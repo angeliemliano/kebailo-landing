@@ -51,7 +51,7 @@ h2  {
 }
 
 li {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 p {
@@ -490,7 +490,7 @@ p {
   margin:0;
   padding-left:10px;
   color: rgba(47,47,47,.86);
-  font-size:13px;
+  font-size:11px;
   list-style: none;
 }
 .specs li{ margin:6px 0; }
